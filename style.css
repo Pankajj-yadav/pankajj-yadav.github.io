@@ -550,9 +550,11 @@ section {
 
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
     gap: 40px;
+
+    align-items: stretch;
 
 }
 
@@ -1096,7 +1098,7 @@ section {
 
     section {
 
-        padding: 80px 25px;
+        padding: 70px 20px;
 
     }
 
@@ -1119,9 +1121,14 @@ section {
     }
 
     .hero-buttons {
-
         flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
 
+    .hero-buttons a {
+        width: 100%;
+        max-width: 280px;
     }
 
 }
@@ -1624,6 +1631,30 @@ body {
     letter-spacing: -2px;
 }
 
+@media (max-width: 992px) {
+    .hero-left h1 {
+        font-size: 3.5rem;
+        line-height: 1.1;
+        letter-spacing: -1px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-left h1 {
+        font-size: 2.8rem;
+        line-height: 1.15;
+        letter-spacing: -0.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-left h1 {
+        font-size: 2.3rem;
+        line-height: 1.2;
+        letter-spacing: 0;
+    }
+}
+
 .hero-left h2 {
     font-size: 1.45rem;
     margin-top: 18px;
@@ -1761,4 +1792,16 @@ body {
 .secondary-btn {
     font-weight: 600;
     letter-spacing: .4px;
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 18px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
 }
